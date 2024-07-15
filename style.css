@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;  /* Use border-box model for all elements */
+}
+
+:focus {
+  outline: none;  /* Remove default focus outline */
+}
+
+body {
+  font-family: Arial, sans-serif;  /* Set default font */
+  background: linear-gradient(to left, rgb(219, 69, 9), rgb(255, 221, 29));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+input {
+  width: 300px;  /* Input width */
+  padding: 10px;  /* Padding inside input */
+  font-size: 16px;  /* Font size */
+  border: 1px solid #ccc;  /* Border style */
+  border-radius: 5px;  /* Rounded corners */
+  background-color: rgba(248, 167, 60, 0.925);
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-container input,
+.search-container .suggestions {
+  margin-top: 10px;  /* Space between input and suggestions */
+}
+
+.search-container .suggestions {
+  width: 320px;  /* Suggestions width */
+  max-height: 200px;  /* Limit height for scroll */
+  overflow-y: auto;  /* Add scroll if needed */
+  border: 1px solid #ccc;   /*FIX THIS Border for suggestions */
+  border-radius: 5px;  /* Rounded corners */
+  background-color: rgb(219, 69, 9, .5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Shadow for suggestions */
+}
+
+ul {
+  list-style-type: none;  /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+ul.has-suggestions {
+  display: block;  /* Show suggestions */
+}
+
+ul li {
+  padding: 10px;  /* Padding inside list item */
+  cursor: pointer;  /* Pointer cursor */
+}
+
+ul li:hover {
+  background-color: #f0f0f0;  /* Light background on hover */
+}
